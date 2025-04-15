@@ -115,7 +115,7 @@ def start_timidity(sfont):
 
 def start_fluidsynth(sfont):
     """Start FluidSynth process."""
-    cmd = ['fluidsynth', '-a', 'pulseaudio', sfont]
+    cmd = ['fluidsynth', '-sia', 'pulseaudio', sfont]
     proc = subprocess.Popen(cmd, shell=False, stdout=subprocess.DEVNULL)
     log('Starting MIDI client (pid: {0})'.format(proc.pid))
     log('Using soundfont: {}'.format(sfont))
